@@ -1182,7 +1182,7 @@ ${desc}`)
         case prefix+'owner':
         case prefix+'creator':
             tobz.sendContact(chatId, `6287775452636@c.us`)
-            tobz.reply(from, 'mau ngapain minta nomor ownerku @c.us\nItu nomor Ownerku', id)
+            tobz.reply(from, 'Nih Nomor Owner T027BOT', id)
             break
         case prefix+'resetsticker':
             if(isReg(obj)) return
