@@ -986,24 +986,6 @@ module.exports = tobz = async (tobz, message) => {
                 await tobz.reply(from, `Wrong Format!\n[❗] Kirim perintah *#glitch [ |Teks1|Teks2 ]*, contoh *#glitch |T027|BOT*`, id)
             }
             break
-        case prefix+'tahta':
-            if(isReg(obj)) return
-            if(cekumur(cekage)) return
-            if (isLimit(serial)) return tobz.reply(from, `Maaf ${pushname}, Kuota Limit Kamu Sudah Habis, Ketik ${prefix}limit Untuk Mengecek Kuota Limit Kamu`, id)
-            if (args.length === 1) return tobz.reply(from, `Kirim perintah *#tahta [ |Teks1|Teks2 ]*, contoh *#glitch |T027|BOT*`, id)
-            argz = body.trim().split('|')
-            if (argz.length >= 2) {
-                tobz.reply(from, mess.wait, id)
-                const tahta = argz[1]
-                const tahta2 = argz[2]
-                if (glitch1.length > 10) return tobz.reply(from, '*Teks1 Terlalu Panjang!*\n_Maksimal 10 huruf!_', id)
-                if (glitch2.length > 15) return tobz.reply(from, '*Teks2 Terlalu Panjang!*\n_Maksimal 15 huruf!_', id)
-                tobz.sendFileFromUrl(from, `https://api.vhtear.com/glitchtext?text1=${tahta}&text2=${tahta2}&apikey=${vhtearkey}`)
-                await limitAdd(serial)
-            } else {
-                await tobz.reply(from, `Wrong Format!\n[❗] Kirim perintah *#tahta [ |Teks1|Teks2 ]*, contoh *#glitch |T027|BOT*`, id)
-            }
-            break
         case prefix+'daftar':  // NAMBAHIN NOMOR DI DATABASE
                 argz = body.trim().split('|')
                 if (argz.length >= 2) {
